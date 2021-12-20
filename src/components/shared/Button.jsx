@@ -79,6 +79,13 @@ const StyledButton = styled.button`
         opacity: 0.5;
       }
 
+      :focus {
+        outline: none !important;
+        border: 2px solid ${theme.color.primary};
+        box-shadow: 0 0 10px ${theme.color.primary};
+      }
+
+
       * {
         cursor: inherit;
       }
@@ -86,6 +93,10 @@ const StyledButton = styled.button`
       div {
         ${flexify()}
       }
+    }
+
+    @media (max-width: 800px) {
+      height: 46px;
     }
   `}
 `;

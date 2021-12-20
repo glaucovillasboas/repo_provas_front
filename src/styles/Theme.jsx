@@ -8,7 +8,7 @@ const theme = {
     primaryLight: '#F0A202',
     text: '#fff',
     white: '#fff',
-    danger: 'rgb(200, 100, 89)',
+    danger: 'rgb(250, 0, 0)',
     gray: '#C6C6C6',
     green: '#03AC00',
     red: '#C70000',
