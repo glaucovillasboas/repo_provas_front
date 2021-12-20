@@ -7,7 +7,6 @@ ${({
   marginBottom = 'none',
   paddingLeft = 'medium',
   fontSize = 'large',
-  background = 'primaryLighter',
   color = 'black',
 }) => css`
     border-radius: 5px;
@@ -18,15 +17,12 @@ ${({
     color: ${theme.color[color]};
     padding-left:  ${theme.spacing[paddingLeft]};
     margin-bottom: ${theme.spacing[marginBottom]};
-    
+    background: #fff;
+
     :focus {
       outline: none !important;
       border: 2px solid ${theme.color.primary};
       box-shadow: 0 0 10px ${theme.color.primary};
-    }
-
-    option {
-      background: ${theme.color[background]};
     }
   `}
 `;

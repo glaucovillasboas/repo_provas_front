@@ -49,6 +49,12 @@ const StyledInput = styled.input`
     font-family: "Raleway", sans-serif;
     font-size: 20px;
     line-height: 23.48px;
+
+    & {
+      :disabled {
+        opacity: 0.7;
+      }
+    }
 `;
 
 const InputWrapper = styled.div`
