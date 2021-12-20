@@ -38,7 +38,7 @@ const Home = () => {
     categoryId: '',
   });
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const yearMask = (year) => year.replace(/[^0-9.]/g, '');
 
