@@ -1,5 +1,5 @@
 ## Deployment 🚀
-You can check the application in production here: [https://repo-provas-glauco.herokuapp.com/](https://repo-provas-glauco.herokuapp.com/)
+You can check the application in production here: [https://repo-provas-front-p24ao8rzv-glappsmobile.vercel.app/](https://repo-provas-front-p24ao8rzv-glappsmobile.vercel.app/)
 
 ### Tooling:
 * [ReactJS](https://reactjs.org/)
