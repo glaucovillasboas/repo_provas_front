@@ -101,6 +101,8 @@ const SubmitExam = () => {
           title: 'Sucesso!',
           text: 'Prova publicada com sucesso',
           confirmButtonColor: theme.color.primary,
+        }).then(() => {
+          navigate('/');
         })
         setIsLoading(false);
       })
