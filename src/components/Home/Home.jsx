@@ -18,7 +18,10 @@ const Home = () => {
         Publicar provas
       </Button>
 
-      <Button big>
+      <Button
+        onClick={() => navigate('/exams')}
+        big
+      >
         Ver provas
       </Button>
     </Container >

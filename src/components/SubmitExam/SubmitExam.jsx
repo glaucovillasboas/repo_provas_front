@@ -11,7 +11,7 @@ import * as repoProvasServices from '../../services/repoProvas.service';
 import validURL from './validURL';
 import Swal from 'sweetalert2';
 
-const Home = () => {
+const SubmitExam = () => {
   const navigate = useNavigate();
   const theme = useContext(ThemeContext);
   const [categories, setCategories] = useState([]);
@@ -92,8 +92,6 @@ const Home = () => {
       return;
     }
 
-    console.log(formData)
-
     setIsLoading(true);
     repoProvasServices
       .createExam(formData)
@@ -103,14 +101,11 @@ const Home = () => {
           title: 'Sucesso!',
           text: 'Prova publicada com sucesso',
           confirmButtonColor: theme.color.primary,
-        }).then(() => {
-          navigate('/');
-        });
-
+        })
         setIsLoading(false);
       })
       .catch((error) => {
-        console.log(error.response)
+        console.error(error.response)
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
@@ -208,14 +203,15 @@ const Home = () => {
           onChange={handleChange('teacherId')}
           required
         >
-          <option value=""> Professor </option>
+          <option value=""> Professor(a) </option>
           {teachers.length > 0 ? (
             teachers.map((teacher) => (
               <option key={teacher.id} value={teacher.id}> {teacher.name} </option>
             ))
           ) : (
-            <option disabled> Carregando... </option>
-          )}
+            formData.disciplineId !== '' && (
+              <option disabled> Carregando... </option>
+            ))}
         </Select>
         <Button
           type="submit"
@@ -237,4 +233,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default SubmitExam;

@@ -6,8 +6,9 @@ const GlobalStyle = createGlobalStyle`
     body {
       background-color: ${theme.color.primary};
       font-family: ${theme.font.family};
-      overflow: hidden;
-    }
+      background-image: linear-gradient(to right top, #cb8900, #f18805, #f18805, #f18805, #f18805);
+      overflow-x: hidden;
+   }
 
     a {
       text-decoration: none;
@@ -26,12 +27,10 @@ const GlobalStyle = createGlobalStyle`
     @keyframes fadeIn {
       0% {
         opacity: 0;
-        transform: translateY(50px);
       }
 
       100% {
         opacity: 1;
-        transform: translate(0);
       }
     }
   `}

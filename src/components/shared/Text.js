@@ -4,17 +4,18 @@ import { css } from 'styled-components/macro';
 
 const Text = styled.span`
   ${({
-    theme,
-    color = 'text',
-    fontWeight = 'normal',
-    fontSize = 'medium',
-    marginTop = 'none',
-    marginBottom = 'none',
-    paddingX = 'none',
-    paddingY = 'none',
-    maxWidth,
-    variant = '',
-  }) => {
+  theme,
+  color = 'text',
+  fontWeight = 'normal',
+  fontSize = 'medium',
+  marginTop = 'none',
+  marginBottom = 'none',
+  paddingX = 'none',
+  paddingY = 'none',
+  maxWidth,
+  responsive,
+  variant = '',
+}) => {
     if (variant === 'helper') {
       color = 'danger';
       marginTop = 'small';
@@ -42,9 +43,16 @@ const Text = styled.span`
         overflow: hidden;
         width: ${maxWidth};
       `}
+
+    ${responsive && (`
+      @media (max-width: 800px) {
+        font-size: ${theme.font.size.small};
+      }`
+      )}
+
     `;
   }
-}
+  }
 `;
 
 export default Text;

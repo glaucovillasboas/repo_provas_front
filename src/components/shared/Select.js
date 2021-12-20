@@ -24,6 +24,10 @@ ${({
       border: 2px solid ${theme.color.primary};
       box-shadow: 0 0 10px ${theme.color.primary};
     }
+
+    @media (max-width: 800px) {
+      font-size: ${theme.font.size.small};
+    }
   `}
 `;
 
